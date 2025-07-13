@@ -10,24 +10,6 @@ This project implements a fully automated **MLOps pipeline** for a **Spam Email 
 
 ---
 
-## 📂 Project Structure
-
-├── data/ # Data (tracked by DVC)
-├── dvc.yaml # DVC pipeline stages
-├── params.yaml # Central config for all stages
-├── metrics.json # Model evaluation metrics
-├── plots/ # DVC plots for metrics (optional)
-├── src/ # Source scripts
-│ ├── data_ingestion.py
-│ ├── preprocessing.py
-│ ├── feature_engineering.py
-│ ├── model_training.py
-│ ├── model_evaluation.py
-├── .dvc/ # DVC internals
-├── .gitignore
-└── README.md # You're here!
-
-
 ## 🔄 MLOps Pipeline Flow (Automated with DVC)
 
 The pipeline is modular and built using DVC stages:
@@ -46,7 +28,7 @@ Each stage has:
 
 
 Setting up your AWS S3 bucket
-dvc remote add -d myremote s3://your-bucket-name/mlops-spam
-dvc remote modify myremote endpointurl https://s3.YOUR-REGION.amazonaws.com
-dvc remote modify myremote access_key_id <your-access-key>
-dvc remote modify myremote secret_access_key <your-secret-key>
+1. dvc remote add -d myremote s3://your-bucket-name/mlops-spam
+2. dvc remote modify myremote endpointurl https://s3.YOUR-REGION.amazonaws.com
+3. dvc remote modify myremote access_key_id <your-access-key>
+4. dvc remote modify myremote secret_access_key <your-secret-key>
